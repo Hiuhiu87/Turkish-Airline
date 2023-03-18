@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turkish Airline Booking</title>
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./bookside.css" />
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="pop-up-success">
+        <h2 class="pop-up-titleSuc">Bạn đã đặt vé thành công</h2>
+        <button id="close-success">Close</button>
+      </div>
+      <div class="header">
+        <div class="logo-header">
+          <img src="./img/logo.png" alt="" />
+        </div>
+        <div class="nav-header">
+          <ul>
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./introduce.html">About Us</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact</a>
+            </li>
+            <li>
+              <a href="./bookside.html">Booking</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bookside-container">
+            <img src="./img/bookside.jpg" alt="" class="bookside-banner">
+            <div class="bookside-content">
+                <h4 class="bookside-content-title">HELLO</h4>
+                <p class="bookside-content-text">Let's Book Your Ticket</p>
+            </div>
+          <div class="bookside-main">
+            <form action="">
+                <div class="name-row">
+                  <label class="label-input"  for="name-customer">Full Name</label>
+                  <input class="input-type" type="text" id="name-customer" name="name-customer" placeholder="   Enter Your Full Name">
+                </div>
+            
+                <div class="identity-row">
+                  <label class="label-input" for="identity">Identity Number</label>
+                  <input class="input-type" type="text" id="identity" name="identity" placeholder="   Enter Your....">
+                </div>
+                
+                <div class="gender-row">
+                  <label for="gender">Male</label>
+                  <input  type="radio" id="gender1" name="gender">
+                  <label for="gender">Female</label>
+                  <input  type="radio" id="gender0" name="gender">
+                </div>
+        
+                <div class="phone-number-row">
+                  <label class="label-input" for="phone-number">Phone Number</label>
+                  <input class="input-type" type="tel" id="phone-number" name="phone-number" >
+                </div>
+        
+                <div class="book-row">
+                  <label class="label-input" for="book-option">Flight Section</label>
+                  <select class="input-type" name="book-option" id="book-option">
+                      <option value="">-----Select-----</option>
+                      <option value="">HaNoi - SaiGon</option>
+                      <option value="">HaNoi - USA</option>
+                      <option value="">SaiGon - ThaiLand</option>
+                  </select>
+                </div>
+        
+                <div class="birth-row">
+                  <label class="label-input" for="date-birth">Date Of Birth</label>
+                  <input class="input-type" type="date" id="date-birth" name="date-birth">
+                </div>
+        
+                <div class="luggage-row">
+                  <label class="label-input" for="luggage">Your luggage</label>
+                  <input class="input-type" type="text" id="luggage" name="luggage">
+                </div>
+        
+                <div class="pay-row">
+                  <label class="label-input" for="book-pay">Payment</label>
+                  <select class="input-type" name="book-pay" id="book-pay">
+                      <option value="">-----Select-----</option>
+                      <option value="">Cash</option>
+                      <option value="">Visa Card</option>
+                      <option value="">Master Card</option>
+                  </select>
+                </div>
+
+                <div class="bookside-button">
+                  <button type="reset" id="reset">Reset</button>
+                  <button type="button" id="submit">Submit</button>
+                </div>
+
+            </form>
+            </div>
+      </div>
+      <div class="footer">
+        Turkish Airlines Copyright © 1996 - 2023
+      </div>
+    </div>
+
+  <script src="./success.js"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+/* pop up */
+.pop-up-success{
+    display: none;
+    width: 500px;
+    height: 300px;
+    background-color: #2B3947;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.pop-up-titleSuc{
+    color: white;
+}
+
+
+/* ------ */
+
+/* bookside */
+.bookside-container{
+    max-width: 1000px;
+    height: 1000px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.bookside-banner{
+    width: 100%;
+    height: 420px;
+    position: relative;
+    z-index: -1;
+}
+
+.bookside-content{
+    /* width: 300px;
+    height: 100px; */
+    position: absolute;
+    top: 80px;
+    left: 100px;
+}
+
+.bookside-content-title, .bookside-content-text{
+    color: white;
+    font-size: 25px;
+    font-style: oblique;
+    letter-spacing: 8px;
+    text-shadow: 0 0 4px gray;
+}
+
+.bookside-main{
+    width: 75%;
+    height: 590px;
+    position: absolute;
+    box-shadow: 0 0 5px 0 gray;
+    top: 35%;
+    left: 13%;
+    z-index: 1;
+    background-color: white;
+    border-radius: 10px;    
+    border-top-left-radius: 0px;
+}
+
+.bookside-main::before{
+    content: "Book Flight";
+    width: 150px;
+    height: 30px;
+    padding: 5px 5px 0 5px;
+    background-color: white;
+    box-shadow: 1px 0 0 0  2px 0 gray;
+    position: absolute;
+    transform: translateY(-34px);
+    border: 0;
+    border-top: 2px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    /* border-bottom: 1px solid gray; */
+    color: red;
+    text-align: center;
+}
+
+label{
+    padding: 5px;
+}
+
+form{
+    position: relative;
+    top: 20px;
+    left: 15%;
+}
+
+.label-input{
+    min-width: 180px;
+}
+
+.name-row, .identity-row, .gender-row, .phone-number-row, .book-row, .birth-row, .luggage-row, .pay-row{
+    display: flex;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.bookside-button{
+    position: absolute;
+    left: 20%;
+    transform: translateY(20px);
+}
+
+.input-type{
+    flex: 1;
+    border: 1px solid gray;
+    border-radius: 7px;
+}
+
+#reset, #submit {
+    min-width: 90px;
+    min-height: 40px;
+    color: white;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+#reset:hover {
+   box-shadow: 0 0 6px 0 gray;
+   background-color: rgba(35, 43, 56, 0.9);
+}
+
+#submit:hover {
+   box-shadow: 0 0 6px 0 gray;
+   background-color: rgba(232, 25, 50, 0.9);
+
+}
+
+#reset{
+    background-color: rgb(35, 43, 56);
+    margin-right: 10px;
+}
+
+#submit{
+    background-color: rgb(232, 25, 50);
+}
