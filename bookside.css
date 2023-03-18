@@ -10,12 +10,28 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
+    border-radius: 15px;
 }
 
 .pop-up-titleSuc{
     color: white;
+    margin-top: 60px;
 }
 
+#close-success{
+    width: 80px;
+    height: 30px;
+    margin-top: 40px;
+    background-color: rgb(232, 25, 50);
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+#close-success:hover{
+    box-shadow: 0 0 10px 0 rgb(232, 25, 50) ;
+}
 
 /* ------ */
 
