@@ -1,121 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turkish Airline Booking</title>
-    <link rel="stylesheet" href="./base.css" />
-    <link rel="stylesheet" href="./bookside.css" />
-    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="pop-up-success">
-        <h2 class="pop-up-titleSuc">Bạn đã đặt vé thành công</h2>
-        <button id="close-success">Close</button>
-      </div>
-      <div class="header">
-        <div class="logo-header">
-          <img src="./img/logo.png" alt="" />
-        </div>
-        <div class="nav-header">
-          <ul>
-            <li>
-              <a href="./index.html">Home</a>
-            </li>
-            <li>
-              <a href="./introduce.html">About Us</a>
-            </li>
-            <li>
-              <a href="./contact.html">Contact</a>
-            </li>
-            <li>
-              <a href="./bookside.html">Booking</a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="bookside-container">
-            <img src="./img/bookside.jpg" alt="" class="bookside-banner">
-            <div class="bookside-content">
-                <h4 class="bookside-content-title">HELLO</h4>
-                <p class="bookside-content-text">Let's Book Your Ticket</p>
-            </div>
-          <div class="bookside-main">
-            <form action="">
-                <div class="name-row">
-                  <label class="label-input"  for="name-customer">Full Name</label>
-                  <input class="input-type" type="text" id="name-customer" name="name-customer" placeholder="   Enter Your Full Name">
-                </div>
-            
-                <div class="identity-row">
-                  <label class="label-input" for="identity">Identity Number</label>
-                  <input class="input-type" type="text" id="identity" name="identity" placeholder="   Enter Your....">
-                </div>
-                
-                <div class="gender-row">
-                  <label for="gender">Male</label>
-                  <input  type="radio" id="gender1" name="gender">
-                  <label for="gender">Female</label>
-                  <input  type="radio" id="gender0" name="gender">
-                </div>
-        
-                <div class="phone-number-row">
-                  <label class="label-input" for="phone-number">Phone Number</label>
-                  <input class="input-type" type="tel" id="phone-number" name="phone-number" >
-                </div>
-        
-                <div class="book-row">
-                  <label class="label-input" for="book-option">Flight Section</label>
-                  <select class="input-type" name="book-option" id="book-option">
-                      <option value="">-----Select-----</option>
-                      <option value="">HaNoi - SaiGon</option>
-                      <option value="">HaNoi - USA</option>
-                      <option value="">SaiGon - ThaiLand</option>
-                  </select>
-                </div>
-        
-                <div class="birth-row">
-                  <label class="label-input" for="date-birth">Date Of Birth</label>
-                  <input class="input-type" type="date" id="date-birth" name="date-birth">
-                </div>
-        
-                <div class="luggage-row">
-                  <label class="label-input" for="luggage">Your luggage</label>
-                  <input class="input-type" type="text" id="luggage" name="luggage">
-                </div>
-        
-                <div class="pay-row">
-                  <label class="label-input" for="book-pay">Payment</label>
-                  <select class="input-type" name="book-pay" id="book-pay">
-                      <option value="">-----Select-----</option>
-                      <option value="">Cash</option>
-                      <option value="">Visa Card</option>
-                      <option value="">Master Card</option>
-                  </select>
-                </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turkish Airline Booking</title>
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./bookside.css" />
+  <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
 
-                <div class="bookside-button">
-                  <button type="reset" id="reset">Reset</button>
-                  <button type="button" id="submit">Submit</button>
-                </div>
-
-            </form>
-            </div>
+<body>
+  <div class="container">
+    <div class="pop-up-success">
+      <h2 class="pop-up-titleSuc">Booking Success</h2>
+      <table>
+        <tr>
+          <td id="name-value"></td>
+        </tr>
+        <tr>
+          <td id="email-value"></td>
+        </tr>
+        <tr>
+          <td id="phone-value"></td>
+        </tr>
+        <tr>
+          <td id="age-value"></td>
+        </tr>
+        <tr>
+          <td id="gender-value"></td>
+        </tr>
+        <tr>
+          <td id="identity-value"></td>
+        </tr>
+        <tr>
+          <td id="pay-value"></td>
+        </tr>
+        <tr>
+          <td id="luggage-value"></td>
+        </tr>
+        <tr>
+          <td id="flight-value"></td>
+        </tr>
+      </table>
+      <button id="close-success">Close</button>
+    </div>
+    <div class="header">
+      <div class="logo-header">
+        <img src="./img/logo.png" alt="" />
       </div>
-      <div class="footer">
-        Turkish Airlines Copyright © 1996 - 2023
+      <div class="nav-header">
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./introduce.html">About Us</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="./bookside.html">Booking</a>
+          </li>
+        </ul>
       </div>
     </div>
 
-  <script src="./success.js"></script>
-  </body>
+    <div class="bookside-container">
+      <img src="./img/bookside.jpg" alt="" class="bookside-banner" />
+      <div class="bookside-content">
+        <h4 class="bookside-content-title">HELLO</h4>
+        <p class="bookside-content-text">Let's Book Your Ticket</p>
+      </div>
+      <div class="bookside-main">
+        <form action="" id="form-valid">
+          <div class="name-row">
+            <label class="label-input" for="name-customer">Full Name</label>
+            <input class="input-type" type="text" id="name-customer" name="name-customer"
+              placeholder="   Enter Your Full Name" />
+            <span class="message-error"></span>
+          </div>
+
+          <div class="identity-row">
+            <label class="label-input" for="identity">Identity Number</label>
+            <input class="input-type" type="text" id="identity" name="identity"
+              placeholder="   Enter Your Identity Number" />
+            <span class="message-error"></span>
+          </div>
+
+          <div class="email-row">
+            <label class="label-input" for="email">Email</label>
+            <input class="input-type" type="email" id="email" name="email" placeholder="Enter Your Email"/>
+            <span class="message-error email-error"></span>
+          </div>
+
+          <div class="gender-row">
+            <label for="gender">Male</label>
+            <input type="radio" id="gender1" value="1" name="gender" checked/>
+            <label for="gender">Female</label>
+            <input type="radio" id="gender" value="2" name="gender" />
+            <span class="message-error"></span>
+          </div>
+
+          <div class="phone-number-row">
+            <label class="label-input" for="phone-number">Phone Number</label>
+            <input class="input-type" type="tel" id="phone-number" name="phone-number"
+              placeholder="Enter Your Phone Number" />
+            <span class="message-error phone-number"></span>
+          </div>
+
+          <div class="book-row">
+            <label class="label-input" for="book-option">Flight Section</label>
+            <select class="input-type"  id="book-option" name="book-option">
+              <option value="0">-----Select-----</option>
+              <option value="1">HaNoi - SaiGon</option>
+              <option value="2">HaNoi - USA</option>
+              <option value="3">SaiGon - ThaiLand</option>
+            </select>
+            <span class="message-error"></span>
+          </div>
+
+          <div class="birth-row">
+            <label class="label-input" for="date-birth">Date Of Birth</label>
+            <input class="input-type" type="date" id="date-birth" name="date-birth" />
+            <span class="message-error"></span>
+          </div>
+
+          <div class="luggage-row">
+            <label class="label-input" for="luggage">Your luggage</label>
+            <input class="input-type" type="text" id="luggage" name="luggage"  />
+            <span class="message-error"></span>
+          </div>
+
+          <div class="pay-row">
+            <label class="label-input" for="book-pay">Payment</label>
+            <select class="input-type"  id="book-pay" name="book-pay" >
+              <option value="0">Select</option>
+              <option value="1">Cash</option>
+              <option value="2">Visa Card</option>
+              <option value="3">Master Card</option>
+            </select>
+            <span class="message-error"></span>
+          </div>
+          <div class="bookside-button">
+            <button type="reset" id="reset">Reset</button>
+            <button type="submit" id="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer">Turkish Airlines Copyright © 1996 - 2023</div>
+  </div>
+
+  <script src="./validate.js"></script>
+  <script>
+    Validator({
+      form: "#form-valid",
+      rules: [
+        Validator.isRequired("#name-customer"),
+        Validator.isRequired("#phone-number"),
+        Validator.isRequired("#book-pay"),
+        Validator.isRequired('#email'),
+        Validator.isRequired('#identity'),
+        Validator.isEmail('#email'),
+        Validator.isRequired("#luggage"),
+        Validator.isNumeric("#identity"),
+        Validator.isMinLength("#identity", 10),
+        Validator.isPhoneNumber('#phone-number'),
+        Validator.isSelected('#book-pay'),
+        Validator.isSelected('#book-option'),
+        Validator.isSelected('#date-birth')
+      ],
+
+      onSubmit: function (dateUser) {
+        console.log(dateUser);
+        // Update the HTML elements with the user inputs
+        let nameValue = document.getElementById("name-value");
+        let emailValue = document.getElementById("email-value");
+        let phoneValue = document.getElementById("phone-value");
+        let ageValue = document.getElementById("age-value");
+        let genderValue = document.getElementById("gender-value");
+        let identityValue = document.getElementById("identity-value");
+        let payValue = document.getElementById("pay-value");
+        let luggageValue = document.getElementById("luggage-value");
+        let flightValue = document.getElementById("flight-value");
+
+        function updateSuccessPopup(dateUser) {
+          nameValue.textContent = "Họ và Tên: " +  dateUser["name-customer"] || "";
+          emailValue.textContent = "Email: " +  dateUser["email"] || "";
+          phoneValue.textContent = "Số Điện Thoại: " +  dateUser["phone-number"] || "";
+          ageValue.textContent = "Ngày Sinh: " + dateUser["date-birth"] || "";
+          identityValue.textContent = "Số Căn Cước: " +  dateUser["identity"] || "";
+          payValue.textContent = "Hình Thức Thanh Toán: " +  dateUser["book-pay"] || "";
+          luggageValue.textContent = "Hành Lý: " + dateUser["luggage"] || "";
+          flightValue.textContent = "Chuyến Bay: " +  dateUser["book-option"] || "";
+      }
+
+      updateSuccessPopup(dateUser)
+
+      let successPopup = document.querySelector(".pop-up-success");
+      successPopup.style.display = "block";
+      }
+    });
+  </script>
+</body>
 </html>

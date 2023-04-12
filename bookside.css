@@ -1,8 +1,8 @@
 /* pop up */
 .pop-up-success{
     display: none;
-    width: 500px;
-    height: 300px;
+    width: 700px;
+    height: 400px;
     background-color: #2B3947;
     position: fixed;
     top: 50%;
@@ -15,13 +15,24 @@
 
 .pop-up-titleSuc{
     color: white;
-    margin-top: 60px;
+    margin-top: 20px;
+}
+
+table{   
+    width: 400px;
+    height: 260px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
 #close-success{
     width: 80px;
     height: 30px;
-    margin-top: 40px;
+    margin-top: 25px;
     background-color: rgb(232, 25, 50);
     color: white;
     border-radius: 5px;
@@ -36,12 +47,16 @@
 /* ------ */
 
 /* bookside */
+.container{
+    height: 1200px;
+}
 .bookside-container{
     max-width: 1000px;
     height: 1000px;
     margin-bottom: 20px;
     margin-top: 10px;
     position: relative;
+    margin: 5px auto;
 }
 
 .bookside-banner{
@@ -68,11 +83,11 @@
 }
 
 .bookside-main{
-    width: 75%;
-    height: 590px;
+    width: 750px;
+    height: 800px;
     position: absolute;
     box-shadow: 0 0 5px 0 gray;
-    top: 35%;
+    top: 20%;
     left: 13%;
     z-index: 1;
     background-color: white;
@@ -93,9 +108,11 @@
     border-top: 2px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    /* border-bottom: 1px solid gray; */
-    color: red;
-    text-align: center;
+    background-image: url('./img/airplane.png');
+    background-repeat: no-repeat;
+    background-position: 1px;
+    color: rgb(218, 35, 35);
+    text-align:end;
 }
 
 label{
@@ -106,27 +123,51 @@ form{
     position: relative;
     top: 20px;
     left: 15%;
+    margin-top: 30px;
 }
 
 .label-input{
     min-width: 180px;
+    grid-area: myLabel;
 }
 
-.name-row, .identity-row, .gender-row, .phone-number-row, .book-row, .birth-row, .luggage-row, .pay-row{
-    display: flex;
-    width: 500px;
+.name-row, .identity-row, .phone-number-row, .book-row, .birth-row, .luggage-row, .pay-row, .email-row{
+    display: grid;
+    max-width: 500px;
     margin-bottom: 20px;
+    grid-template-areas: 
+    'myLabel myLabel myInput myInput'
+    'myLabel myLabel myError myError';
+    justify-content: space-between;
+}
+
+
+
+.gender-row{
+    margin-bottom: 20px;
+    display: flex;
 }
 
 .bookside-button{
     position: absolute;
     left: 20%;
+    bottom: -80px;
     transform: translateY(20px);
 }
 
 .input-type{
-    flex: 1;
+    grid-area: myInput;
     border: 1px solid gray;
+    border-radius: 7px;
+    padding: 5px;
+    min-width: 305px;
+}
+
+.input-type:hover{
+    border-color: rgb(14, 86, 201);
+}
+
+#book-option:hover{
     border-radius: 7px;
 }
 
@@ -158,3 +199,24 @@ form{
 #submit{
     background-color: rgb(232, 25, 50);
 }
+
+.invalid input, .invalid select{
+    border-bottom:2px solid red ;
+}
+
+.message-error{
+    font-weight: bold;
+    color: red;
+    font-size: 13px;
+    /* margin-left: 8px;
+    position: relative; */
+    grid-area: myError;
+}
+
+
+td{
+    border: 1px solid white;
+    color: white;
+}
+
+

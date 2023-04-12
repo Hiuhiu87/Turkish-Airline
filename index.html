@@ -17,9 +17,13 @@
   </head>
 
   <body>
-    <div id="pop-up">
-      <h2 class="popup-title">Đây là trang đặt chuyến bay chính thức của Turkishs Airline</h2>
-      <button id="close-popup">X-close</button>
+    <div class="pop-up">
+      <div id="pop-up-main">
+        <h2 class="popup-title">Welcome to Turkishs Airline</h2>
+        <p class="pop-up-content">HELLO <br>
+          Where do you want to explore?</p>
+        <button id="close-popup">X</button>
+      </div>
     </div>
     <div class="container">
       <div class="header">
@@ -45,14 +49,13 @@
       </div>
 
       <div class="banner">
-        <div class="banner-content">
-          <h2 class="banner-content-flex">
-            Make your dream come true to see the world
-          </h2>
-          <p class="banner-content-detail">
-            Delicated to making travel as simple as possible, we help each and
-            every one of them find the best options across Airlines
-          </p>
+        <div class="slider">
+          <img src="./img/background.jpg" alt="" class="slide-img" />
+          <img src="./img/background1.png" alt="" class="slide-img" />
+          <img src="./img/banner_contact.jpg" alt="" class="slide-img" />
+          <img src="./img/introduce.jpg" alt="" class="slide-img" />
+          <button id="next">&#10096;</button>
+          <button id="previous">&#10097;</button>
         </div>
       </div>
 
@@ -125,6 +128,8 @@
       </div>
       <div class="footer">Turkish Airlines Copyright © 1996 - 2023</div>
     </div>
-    <script src="./main.js"></script>
+    <script src="./popup.js"></script>
+    <script src="./slide.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
